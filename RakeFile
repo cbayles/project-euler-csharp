@@ -1,0 +1,19 @@
+
+desc 'build'
+task :build do
+  sh 'xbuild *.sln /verbosity:q'
+end
+
+desc 'test'
+task :test do
+  def test_dlls
+    Dir['**/*NSpec.dll'].select {|f| !f.downcase.include?('packages')}.map {|f| f.gsub(/([^\/]*)\/bin\/Debug\/.*/, '\1/bin/Debug/\1.dll')}
+  end
+  
+  test_dlls.each do |dll| 
+    sh 'mono packages/NSpec-0.9.58/NSpecRunner.exe ' + dll
+  end
+end
+
+desc 'default rake task builds project(s)'
+task :default => [:build, :test]
