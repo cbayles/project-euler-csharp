@@ -45,7 +45,7 @@
     <Compile Include="Problem1.cs" />
     <Compile Include="EulerTests.cs" />
     <Compile Include="Problem2.cs" />
-    <Compile Include="DebuggerShim.cs" />
+    <Compile Include="Problem3.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
