@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace ProjectEuler
@@ -13,13 +14,13 @@ namespace ProjectEuler
 		{
 		}
 
-		public long[] GetPrimes(long seed)
+		public long GetMaxPrime(long seed)
 		{
 			var start = DateTime.Now;
 			var primes = GetPrimesFor(seed);
 			var end = DateTime.Now;
 			Console.WriteLine("Finished in {0} milliseconds", end.Subtract(start).TotalMilliseconds);
-			return primes;
+			return primes.Max();
 		}
 		
 		public long[] GetPrimesFor(long seed)

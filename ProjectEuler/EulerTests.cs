@@ -61,29 +61,30 @@ namespace ProjectEuler
 		void Problem3_When_finding_prime_factors()
 		{
 			var problem = new Problem3();
-			it["of 1 should be empty set"] = () => problem.GetPrimes(1).should_be_empty();
-			it["of 2 should be 2"] = () => problem.GetPrimes(2).should_be(2);
-			it["of 3 should be 3"] = () => problem.GetPrimes(3).should_be(3);
-			it["of 4 should be 2,2"] = () => problem.GetPrimes(4).should_be(2,2); 
-			it["of 5 should be 5"] = () => problem.GetPrimes(5).should_be(5);  
-			it["of 6 should be 2,3"] = () => problem.GetPrimes(6).should_be(2,3);  
-			it["of 7 should be 7"] = () => problem.GetPrimes(7).should_be(7); 
-			it["of 8 should be 2,2,2"] = () => problem.GetPrimes(8).should_be(2,2,2); 
-			it["of 9 should be 3,3"] = () => problem.GetPrimes(9).should_be(3,3); 
-			it["of 10 should be 2,5"] = () => problem.GetPrimes(10).should_be(2,5); 
-			it["of 11 should be 11"] = () => problem.GetPrimes(11).should_be(11); 
-			it["of 12 should be 2,2,3"] = () => problem.GetPrimes(12).should_be(2,2,3); 
-			it["of 13 should be 13"] = () => problem.GetPrimes(13).should_be(13);  
-			it["of 14 should be 2,7"] = () => problem.GetPrimes(14).should_be(2,7);  
-			it["of 15 should be 3,5"] = () => problem.GetPrimes(15).should_be(3,5);  
-			it["of 16 should be 2,2,2,2"] = () => problem.GetPrimes(16).should_be(2,2,2,2); 
-			it["of 17 should be 17"] = () => problem.GetPrimes(17).should_be(17);  
-			it["of 18 should be 2,3,3"] = () => problem.GetPrimes(18).should_be(2,3,3);  
-			it["of 19 should be 19"] = () => problem.GetPrimes(19).should_be(19);  
-			it["of 20 should be 2,2,5"] = () => problem.GetPrimes(20).should_be(2,2,5); 
-			it["of 77 should be 7,11"] = () => problem.GetPrimes(77).should_be(7,11);  
-			it["of 13195 should be 5,7,13,29"] = () => problem.GetPrimes(13195).should_be(5,7,13,29);
-			it["of 600851475143 should be 71,839,1471,6857"] = () => problem.GetPrimes(600851475143).should_be(71,839,1471,6857); 
+			it["primes of 1 should be empty set"] = () => problem.GetPrimesFor(1).should_be_empty();
+			it["primes of 2 should be 2"] = () => problem.GetPrimesFor(2).should_be(2);
+			it["primes of 3 should be 3"] = () => problem.GetPrimesFor(3).should_be(3);
+			it["primes of 4 should be 2,2"] = () => problem.GetPrimesFor(4).should_be(2,2); 
+			it["primes of 5 should be 5"] = () => problem.GetPrimesFor(5).should_be(5);  
+			it["primes of 6 should be 2,3"] = () => problem.GetPrimesFor(6).should_be(2,3);  
+			it["primes of 7 should be 7"] = () => problem.GetPrimesFor(7).should_be(7); 
+			it["primes of 8 should be 2,2,2"] = () => problem.GetPrimesFor(8).should_be(2,2,2); 
+			it["primes of 9 should be 3,3"] = () => problem.GetPrimesFor(9).should_be(3,3); 
+			it["primes of 10 should be 2,5"] = () => problem.GetPrimesFor(10).should_be(2,5); 
+			it["primes of 11 should be 11"] = () => problem.GetPrimesFor(11).should_be(11); 
+			it["primes of 12 should be 2,2,3"] = () => problem.GetPrimesFor(12).should_be(2,2,3); 
+			it["primes of 13 should be 13"] = () => problem.GetPrimesFor(13).should_be(13);  
+			it["primes of 14 should be 2,7"] = () => problem.GetPrimesFor(14).should_be(2,7);  
+			it["primes of 15 should be 3,5"] = () => problem.GetPrimesFor(15).should_be(3,5);  
+			it["primes of 16 should be 2,2,2,2"] = () => problem.GetPrimesFor(16).should_be(2,2,2,2); 
+			it["primes of 17 should be 17"] = () => problem.GetPrimesFor(17).should_be(17);  
+			it["primes of 18 should be 2,3,3"] = () => problem.GetPrimesFor(18).should_be(2,3,3);  
+			it["primes of 19 should be 19"] = () => problem.GetPrimesFor(19).should_be(19);  
+			it["primes of 20 should be 2,2,5"] = () => problem.GetPrimesFor(20).should_be(2,2,5);
+			it["primes of 77 should be 7,11"] = () => problem.GetPrimesFor(77).should_be(7,11);  
+			it["primes of 13195 should be 5,7,13,29"] = () => problem.GetPrimesFor(13195).should_be(5,7,13,29);
+			it["primes of 600851475143 should be 71,839,1471,6857"] = () => problem.GetPrimesFor(600851475143).should_be(71,839,1471,6857); 
+			it["max prime of 600851475143 should be 6857"] = () => problem.GetMaxPrime(600851475143).should_be(6857); 
 		 }
 	}
 }
