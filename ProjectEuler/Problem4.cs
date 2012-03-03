@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using NSpec;
 
 namespace ProjectEuler
 {
@@ -7,10 +8,14 @@ namespace ProjectEuler
 	/// A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 99.
 	/// Find the largest palindrome made from the product of two 3-digit numbers.
 	/// </summary>
-	public class Problem4
+	public class describe_Problem4 : nspec
 	{
-		public Problem4()
+		void When_finding_palindromes()
 		{
+			it["12321 should be one"] = () => IsPalindrome(12321).should_be_true();
+			it["9009 should be one"] = () => IsPalindrome(9009).should_be_true();
+			it["the largest palindrome from the product of 2 digit numbers should be 9009"] = () => LargestPalindromeFor(2).should_be(9009);
+			it["the largest palindrome from the product of 3 digit numbers should be 906609"] = () => LargestPalindromeFor(3).should_be(906609);
 		}
 		
 		public long LargestPalindromeFor(int digits)

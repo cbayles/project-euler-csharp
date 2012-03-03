@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using NSpec;
 
 namespace ProjectEuler
 {
@@ -9,10 +10,23 @@ namespace ProjectEuler
 	/// 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 	/// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 	/// </summary>
-	public class Problem2
+	public class describe_Problem2 : nspec
 	{
-		public Problem2()
+		void Sum_of_fibonacci_numbers_to_10()
 		{
+			var numbers = FibonaccisUpTo(10);
+			it["count of naturals should be 5"] = () => numbers.Count.should_be(5);
+			it["the list should contain 1"] = () => numbers.should_contain(1);
+			it["the list should contain 2"] = () => numbers.should_contain(2);
+			it["the list should contain 3"] = () => numbers.should_contain(3);
+			it["the list should contain 5"] = () => numbers.should_contain(5);
+			it["the list should contain 8"] = () => numbers.should_contain(8);
+			it["the sum of fibonacci evens under 10 should be 10"] = () => FibonacciEvensSum(10).should_be(10);
+		}
+		
+		void Sum_of_fibonacci_numbers_to_4_million()
+		{
+			it["the sum of fibonacci evens under 4,000,000 should be 4613732"] = () => FibonacciEvensSum(4000000).should_be(4613732);
 		}
 
 		public List<int> FibonaccisUpTo(int max)
