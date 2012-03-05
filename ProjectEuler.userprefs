@@ -1,19 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProjectEuler/EulerTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProjectEuler/Problem9.cs">
     <Files>
-      <File FileName="ProjectEuler/EulerTests.cs" Line="31" Column="75" />
-      <File FileName="ProjectEuler/Problem2.cs" Line="1" Column="1" />
-      <File FileName="ProjectEuler/DebuggerShim.cs" Line="21" Column="6" />
-      <File FileName="RakeFile" Line="14" Column="5" />
+      <File FileName="ProjectEuler/Problem8.cs" Line="21" Column="3" />
+      <File FileName="ProjectEuler/Problem9.cs" Line="16" Column="92" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="ProjectEuler" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="EulerTests.cs" selected="True" />
-          </Node>
+          <Node name="ProjectEuler" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
