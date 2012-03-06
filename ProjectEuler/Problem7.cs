@@ -43,8 +43,9 @@ namespace ProjectEuler
 		
 		bool IsPrime(int number)
 		{
-			if (number < 2) return false;
-			for (int i = 2; i < number; i++)
+			if (number == 2) return true;
+			if (number < 2 || number % 2 == 0) return false;
+			for (int i = 3; i <= Math.Sqrt(number); i+=2)
 			{
 				if (i == number)
 					continue;
